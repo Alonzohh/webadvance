@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>---HANGMAN---</h1>
+
+    <script>
+        let words=[
+            "titanium",
+            "crown",
+            "laptop",
+            "station",
+            "refrigerator"
+            ]
+        let word=words[Math.floor(Math.random()*words.length)]
+        console.log(word)
+        
+        let answer=prompt("nhap di");
+        for (let i=0; i < word.length; i++){
+            if (answer === word[i]){
+                console.log("Dung'")
+            }  else console.log("Sai")
+        }
+        let remainingLetter= word.length
+    </script>
+</body>
+</html>

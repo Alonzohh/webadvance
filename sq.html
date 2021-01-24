@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #square{
+   
+        width: 200px;
+        height: 200px;
+        background-color: red;
+    }
+</style>
+<body>
+    <div id="square"></div>
+    <h1>xin chao cac ban</h1>
+    <button onclick="green()">Green</button>
+    <button onclick="black()">Black</button>
+    <button onclick="blue()">Blue</button>
+    <button onclick="red()">Red</button>
+    <script>
+        let sq = document.getElementById("square");
+        let green = function(){
+            sq.style.backgroundColor = "green";
+        }
+        let black = function(){
+            sq.style.backgroundColor = "black";
+        }
+        let blue = function(){
+            sq.style.backgroundColor = "blue";
+        }
+        let red = function(){
+            sq.style.backgroundColor = "red";
+        }
+        
+    </script>
+</body>
+</html>

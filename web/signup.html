@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGNUP</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="favicon-32x32.png">
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: cadetblue;
+        }
+        div{
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top:18%;
+            left:36%;
+            background: black;
+            text-align: center;
+            border-radius: 19px;
+        }
+        input{
+            background: none;
+            border: 2px solid white ;
+            display: block;
+            margin: 2px auto;
+            padding: 10px 6px;
+            color: white;
+            outline: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            height: 25px;
+        }
+        button:hover{
+            background-color: black;
+            opacity: 0.8;
+            color:blanchedalmond    
+        }
+        p{
+            white-space:nowrap;
+            overflow:hidden;
+        }
+    </style>
+    <div align="center" id="box">
+        <h2 style="color: white">Sign up</h2>
+        <input id="email" type="email" placeholder="Email..."><br>
+        <input id="user" type="user" placeholder="Username..."><br>
+        <input id="password" type="password" placeholder="Password..." ><br>
+        <button onclick="store()" style="overflow: hidden;" id="signupbutton">SIGN UP</button><br>
+        <p style="color: white;">Already have an acccount? Login <a style="color: white;" href="login.html">here</a></p>
+        <p id="checkpls"></p>
+    <script>
+        function store(){
+        let listemail=[];
+        let listuser=[];
+        let listpw=[]
+
+        let lemail=document.getElementById('email').value;
+        let luser=document.getElementById('user').value;
+        let lpassword=document.getElementById('password').value;
+        let caseBlock=document.getElementById('checkpls');
+        isAccountExist = false;    
+        if(JSON.parse(localStorage.getItem('listemail') != null)){
+            listemail= JSON.parse(localStorage.getItem('listemail'))
+        }
+        if(JSON.parse(localStorage.getItem('listuser') != null)){
+            listuser= JSON.parse(localStorage.getItem('listuser'))
+        }
+        if(JSON.parse(localStorage.getItem('listpw') != null)){
+            listpw= JSON.parse(localStorage.getItem('listpw'))
+        }
+        if (lemail==""||luser==""||lpassword==""){
+            console.log('Error');
+            alert('invalid information')
+            // caseBlock.innerHTML="Sign up failed"
+        }
+        else{
+            for(let i=0;i<listemail.length;i++){
+                if(lemail == listemail[i]) {
+                    console.log('Da co tai khoan.');
+                    isAccountExist = true;
+                }
+            }
+            if(!isAccountExist){
+                listemail.push(lemail);
+                listuser.push(luser);
+                listpw.push(lpassword)
+                localStorage.setItem("email",JSON.stringify(listemail))
+                localStorage.setItem("user",JSON.stringify(listuser))
+                localStorage.setItem("password",JSON.stringify(lpassword))
+            }
+        }
+    }
+        
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    h1{
+        color: blanchedalmond;
+    }
+    h1:hover{
+        color: red;
+    }
+</style>
+<body>
+    <h1 id="bcd">alo</h1>
+<!-- <input type="text" id="abc"> -->
+<script>
+    let u=document.getElementById("bcd");
+    u.addEventListener("mouseenter",function(n){
+        console.log("ban da lia chuot vao day")
+    })
+    let o=document.getElementById("bcd");
+    o.addEventListener("mouseleave",function(){
+        console.log("ban da lia chuot ra")
+    })
+</script>
+</body>
+</html>

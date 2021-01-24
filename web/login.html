@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="icon" href="favicon-32x32.png">
+</head>
+<body>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: cadetblue;
+            /* background-image:"https://i.pinimg.com/originals/81/3a/3a/813a3a34bd3f25f0526e19e77a0434ee.jpg"; */
+        }
+        div{
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top:22%;
+            left:36%;
+            background: black;
+            text-align: center;
+            border-radius: 19px;
+        }
+        input{
+            background: none;
+            border: 2px solid white ;
+            display: block;
+            margin: 2px auto;
+            padding: 10px 6px;
+            color: white;
+            outline: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+        button{
+            width: 100px;
+            height: 25px;
+        }
+        button:hover{
+            background-color: black;
+            opacity: 0.8;
+            color:blanchedalmond    
+        }
+        p{
+            white-space:nowrap;
+            overflow:hidden;
+        }
+    </style>
+    <div align="center" id="box">
+        <h2 style="color: white;">Login</h2>
+        <!-- <input id="email" type="email" placeholder="Email..."><br> -->
+        <input id="username" type="username" placeholder="Username..."><br>
+        <input id="password" type="password" placeholder="Password..." ><br>
+        <button onclick="check()" style="overflow: hidden;" id="loginbutton">LOG IN</button><br>
+        <p style="color: white;">First time here? <a style="color: white;" href="signup.html">Sign up</a></p>
+        <p id="check"></p>
+    </div>
+    <script>
+        function check() {
+
+        let storedName = localStorage.getItem('user');
+        let storedPw = localStorage.getItem('password')
+        
+        let username = document.getElementById('username');
+        let userPw = document.getElementById('password');
+
+    // check if stored data from register-form is equal to data from login form
+    if(username.value !== storedName || userPw.value !== storedPw) {
+        alert('ERROR');
+    }else {
+        alert('You are logged in.');
+    }
+}
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id = "nice-body">
+    <ul id="list"></ul>
+
+    <script>
+        let body = document.getElementById("nice-body");
+        // let h1 = "<h1>day la the h1 duoc them vao</h1>";
+        // body.innerHTML += h1;
+
+        // let h2 = "<h2>day la the h2</h2>";
+        // body.innerHTML += h2;
+
+        // let newh1 = document.createElement("hi")
+        // newh1.innerHTML = "day la the khac dc them vao"
+        // body.appendChild(newh1)
+
+        // let new2 = document.getElementById("second")
+        // new2.remove() 
+
+        // let todojob1 = document.createElement("h1")
+        // todojob1.innerHTML= " lap trinh trang web"
+        // body.appendChild(todojob1) 
+        
+        // let todojob2 = document.createElement("h1")
+        // todojob2.innerHTML= " lap trinh"
+        // body.appendChild(todojob2)
+
+        // let todojob3 = document.createElement("h1")
+        // todojob3.innerHTML= " lap trinh trang"
+        // body.appendChild(todojob3) 
+
+        // let todojob4 = document.createElement("h1")
+        // todojob4.innerHTML= " lap"
+        // body.appendChild(todojob4) 
+
+        // let todojob5 = document.createElement("h1")
+        // todojob5.innerHTML= " l"
+        // body.appendChild(todojob5) 
+
+        let vieccanlam = ["ngu","an","lau nha","giat do","choi"];
+        // vieccanlam.push("nam ngu")
+        // console.log(vieccanlam)
+
+        // console.log(vieccanlam[2] = "di hoc")
+        // vieccanlam.splice(2,2)
+        // console.log(vieccanlam)
+                  
+        let list= document.getElementById("list")
+        let todojob1tag = document.createElement("li")
+        todojob1tag.innerHTML= vieccanlam[0]
+        list.appendChild(todojob1tag)
+
+        let todojob2tag = document.createElement("li")
+        todojob2tag.innerHTML= vieccanlam[1]
+        list.appendChild(todojob2tag)
+
+        let todojob3tag = document.createElement("li")
+        todojob3tag.innerHTML= vieccanlam[2]
+        list.appendChild(todojob3tag)
+
+        let todojob4tag = document.createElement("li")
+        todojob4tag.innerHTML= vieccanlam[3]
+        list.appendChild(todojob4tag)
+
+        let todojob5tag = document.createElement("li")
+        todojob5tag.innerHTML= vieccanlam[4]
+        list.appendChild(todojob5tag)
+    </script> 
+    
+</body>
+</html>
